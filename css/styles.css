@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*body {
+  margin: 0;
+  padding: 0px;
+}
+
+html * {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#contenedor {
+  width: 1300px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 0px;
+  border-radius: 40px;
+}
+
+header {
+  height: 150px;
+}
+
+nav {
+  height: 80px;
+  margin-top: 10px;
+}
+
+section {
+  margin-top: 10px;
+  height: 480px;
+  width: inherit;
+  background-color: blue;
+  color: red;
+  display: inline-block;
+}
+
+footer {
+  height: 40px;
+  clear: both;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  display: table;
+}
+
+li {
+  float: left;
+  text-align: center;
+  margin: 10px;
+  border: 10px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+}
+
+li a:hover {
+  background-color: #111;
+  text-align: center;
+}
+
+.introduction {
+  margin-top: 10%;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.button_search_now {
+  border-radius: 50rem!important;
+  display: table;
+  margin: 0 auto;
+  border: 0;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #2A93D5;
+  color: white;
+}
+
+.first_row {
+  background-color: #3DDAD8;
+}
+
+article {
+  width: 50%;
+  height: 480px;
+  float: left;
+}
+
+.pharagraphs {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15;
+}
+
+.headers {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 35px;
+}
+
+.image_person {
+  border-radius: 50%!important;
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+  display: table;
+  margin: 0 auto;
+}
