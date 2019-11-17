@@ -94,10 +94,11 @@ li a:hover {
   font-size: 20px;
   background-color: #2A93D5;
   color: white;
+  margin-top: 90px;
 }
 
 .first_row {
-  background-color: #3DDAD8;
+  background-color: #0074D9;
 }
 
 article {
