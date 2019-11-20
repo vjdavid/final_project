@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+<html ng-app="todoApp">
 <head>
+    <meta charset="UTF-8">
     <title>CineApp</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="../js/load.js"></script>
 </head>
 <body>
-    <div id="contenedor">
+    <div id="contenedor" ng-controller="TodoListController as todoList">
         <header>
             <img class="logo" src="../images/cineapp_logo.png">
         </header>
@@ -16,27 +20,33 @@
                 <li><a href="about_us.html">Acerca de Nosotros</a></li>
             </ul>
         </nav>
-        <section class="first_row" style="height: 100px;">
+        <section style="height: 100px;">
             <p class="introduction" style="margin-top: 27px;">Busqueda</p>
         </section>
-        <article>
+        <section>
             <h3>Resultados encontrados: </h3>
             <input type="text" placeholder="Busqueda de Cine"><br><br>
             <button type="button">Buscar</button> 
-        </article>
-        <article>
-            <img src="../images/movies/1.jpg">
-            <img src="../images/movies/2.jpg">
-            <img src="../images/movies/3.jpg">
-            <img src="../images/movies/4.jpg">
-            <img src="../images/movies/5.jpg">
-            <img src="../images/movies/6.jpg">
-            <img src="../images/movies/7.jpg">
-            <img src="../images/movies/8.jpg">
-        </article>
+        </section>
+        <section>
+            <div class="card" ng-repeat="todo in todoList.todos">
+                <div class="column_left_card">
+                    <img class="image_movie" ng-src="{{ todo.imagen }}"/>
+                </div>
+                <div class="column_right_card">
+                    <h3>{{ todo.titulo }}</h3>
+                    <p>{{ todo.clasificacion }}</p>
+                    <p style="text-align: justify;">{{ todo.descripcion }} </p>
+                    <p>Tiempo: {{ todo.duracion }}</p>
+                    <p>Horario: {{ todo.horario }}</p>
+                    <p>Genero: {{ todo.genero }}</p>
+                </div>
+            </div>
+        </section>
+        <!--
         <footer>
             <p>Todos los derechos reservados CineApp 2019</p>
-        </footer>
+        </footer> -->
     </div>
 </body>
 </html>
