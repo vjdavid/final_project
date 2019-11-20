@@ -1,8 +1,7 @@
-angular.module('todoApp', [])
-  .controller('TodoListController', function() {
-    var todoList = this;
+angular.module('moviesApp', [])
+  .controller('SearchController', function($scope) {
 
-    todoList.todos = [
+    $scope.Movies = [
       { 
         titulo: 'Contra lo Imposible', 
         clasificacion: 'B', 
