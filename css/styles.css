@@ -30,7 +30,6 @@ section {
   margin-top: 10px;
   height: 480px;
   width: inherit;
-  background-color: blue;
   color: red;
   display: inline-block;
 }
@@ -97,10 +96,6 @@ li a:hover {
   margin-top: 90px;
 }
 
-.first_row {
-  background-color: #0074D9;
-}
-
 article {
   width: 50%;
   height: 480px;
@@ -131,4 +126,28 @@ article {
   height: 150px;
   display: table;
   margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.column_left_card {
+  width: 20%;
+  float: left;
+  margin: 10px; 
+}
+
+.column_right_card {
+  width: 75%;
+  float: right;
+}
+
+.image_movie {
+  display: table;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 30px;
 }
