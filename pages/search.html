@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="todoApp">
+<html ng-app="moviesApp">
 <head>
     <meta charset="UTF-8">
     <title>CineApp</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="../js/angular.min.js"></script>
     <script src="../js/load.js"></script>
 </head>
 <body>
-    <div id="contenedor" ng-controller="TodoListController as todoList">
+    <div id="contenedor" ng-controller="SearchController">
         <header>
             <img class="logo" src="../images/cineapp_logo.png">
         </header>
@@ -25,21 +25,20 @@
         </section>
         <section>
             <h3>Resultados encontrados: </h3>
-            <input type="text" placeholder="Busqueda de Cine"><br><br>
-            <button type="button">Buscar</button> 
+            <input type="text" ng-model="searchMovie" placeholder="Busqueda de Pelicula"><br><br>
         </section>
         <section>
-            <div class="card" ng-repeat="todo in todoList.todos">
+            <div class="card" ng-repeat="movie in Movies | filter:searchMovie">
                 <div class="column_left_card">
-                    <img class="image_movie" ng-src="{{ todo.imagen }}"/>
+                    <img class="image_movie" ng-src="{{ movie.imagen }}"/>
                 </div>
                 <div class="column_right_card">
-                    <h3>{{ todo.titulo }}</h3>
-                    <p>{{ todo.clasificacion }}</p>
-                    <p style="text-align: justify;">{{ todo.descripcion }} </p>
-                    <p>Tiempo: {{ todo.duracion }}</p>
-                    <p>Horario: {{ todo.horario }}</p>
-                    <p>Genero: {{ todo.genero }}</p>
+                    <h3>{{ movie.titulo }}</h3>
+                    <p>{{ movie.clasificacion }}</p>
+                    <p style="text-align: justify;">{{ movie.descripcion }} </p>
+                    <p>Tiempo: {{ movie.duracion }}</p>
+                    <p>Horario: {{ movie.horario }}</p>
+                    <p>Genero: {{ movie.genero }}</p>
                 </div>
             </div>
         </section>
