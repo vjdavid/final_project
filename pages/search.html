@@ -20,12 +20,12 @@
                 <li><a href="about_us.html">Acerca de Nosotros</a></li>
             </ul>
         </nav>
-        <section style="height: 100px;">
-            <p class="introduction" style="margin-top: 27px;">Busqueda</p>
+        <section style="height: 100px; background-color: #0074D9">
+            <p class="introduction" style="margin-top: 27px;">Búsqueda</p>
         </section>
-        <section>
-            <h3>Resultados encontrados: </h3>
+        <section style="height: 0px;">
             <input type="text" ng-model="searchMovie" placeholder="Busqueda de Pelicula"><br><br>
+            <h3>Resultados encontrados: </h3>
         </section>
         <section>
             <div class="card" ng-repeat="movie in Movies | filter:searchMovie">
@@ -34,11 +34,13 @@
                 </div>
                 <div class="column_right_card">
                     <h3>{{ movie.titulo }}</h3>
-                    <p>{{ movie.clasificacion }}</p>
                     <p style="text-align: justify;">{{ movie.descripcion }} </p>
-                    <p>Tiempo: {{ movie.duracion }}</p>
-                    <p>Horario: {{ movie.horario }}</p>
-                    <p>Genero: {{ movie.genero }}</p>
+                    <ul>
+                        <li><a>{{ movie.clasificacion }}</a></li>
+                        <li><a>{{ movie.duracion }}</a></li>
+                        <li><a>{{ movie.horario }}</a></li>
+                        <li><a>{{ movie.genero }}</a></li>
+                    <ul>
                 </div>
             </div>
         </section>
