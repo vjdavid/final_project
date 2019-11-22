@@ -156,8 +156,6 @@ article {
 input[type=text], select {
   width: 50%;
   padding: 12px 20px;
-  margin: 0 auto;
-  display: table;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
