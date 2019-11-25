@@ -102,6 +102,12 @@ article {
   float: left;
 }
 
+.column {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
 .pharagraphs {
   text-align: center;
   margin-top: 30px;
@@ -188,4 +194,23 @@ input[type=submit]:hover {
 
 .form_group {
   margin: 20px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
