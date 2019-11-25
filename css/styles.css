@@ -236,3 +236,7 @@ input[type=submit]:hover {
   margin:auto;
   overflow:auto;
 }
+
+.color_text {
+  color: black;
+}
