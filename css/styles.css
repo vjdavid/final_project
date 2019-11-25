@@ -34,6 +34,19 @@ section {
   display: inline-block;
 }
 
+.overlay {
+  height: 480px;
+  width: inherit;
+  background: #0074D9;
+  overflow: hidden;
+}
+
+.image_overlay {
+  object-fit: cover;
+  opacity: 0.6;
+  position: absolute;
+}
+
 footer {
   height: 40px;
   clear: both;
@@ -77,11 +90,11 @@ li a:hover {
 }
 
 .introduction {
-  margin-top: 10%;
   font-size: 30px;
   text-align: center;
   color: white;
   font-weight: bold;
+  margin-top: 125px;
 }
 
 .button_search_now {
@@ -213,4 +226,13 @@ input[type=submit]:hover {
   left: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+.brief_cover {
+  position:absolute;
+  left:0; 
+  right:0;
+  top:10;
+  margin:auto;
+  overflow:auto;
 }
