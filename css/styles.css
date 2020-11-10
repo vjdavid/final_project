@@ -18,7 +18,8 @@ html * {
 }
 
 header {
-  height: 150px;
+  height: 65px;
+  text-align: center;
 }
 
 nav {
