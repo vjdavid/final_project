@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="moviesApp">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>CineApp</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/scroll.css">
-    <script src="../js/jquery-2.1.1.js"></script>
-    <script src="../js/angular.min.js"></script>
-    <script src="../js/load.js"></script>
-    <script src="../js/scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
 </head>
 <body>
-    <div id="contenedor" ng-controller="SearchController">
+    <div id="contenedor">
         <header>
           <h1>The MovieRator</h1>
         </header>
@@ -28,30 +25,29 @@
             <p class="introduction" style="margin-top: 27px;">Búsqueda</p>
         </section>
         <section style="height: 0px;">
-            <input type="text" ng-model="searchMovie" placeholder="Busqueda de Pelicula"><br><br>
+            <input type="text" v-model.trim="search" placeholder="Busqueda de Pelicula" @keyup="getMovies"><br><br>
             <h3>Resultados encontrados: </h3>
         </section>
-        <section>
-            <div class="card" ng-repeat="movie in Movies | filter:searchMovie">
+        <section id="app">
+            <div class="card" v-for="movie in movies" :key="movie.id">
                 <div class="column_left_card">
-                    <img class="image_movie" ng-src="{{ movie.imagen }}"/>
+                    <img class="image_movie"
+                    v-bind:src="'https://image.tmdb.org/t/p/original' + movie.poster_path "/>
                 </div>
                 <div class="column_right_card">
-                    <h3>{{ movie.titulo }}</h3>
-                    <p style="text-align: justify;">{{ movie.descripcion }} </p>
+                  <!-- <h3><a v-bind:href="'movie_detail.html?id=' +
+                    movie.id">{{ movie.title }}</a></h3> -->
+                <h3>{{ movie.title }}</h3>
+                    <p style="text-align: justify;">{{ movie.overview }} </p>
                     <ul>
-                        <li><a>{{ movie.clasificacion }}</a></li>
-                        <li><a>{{ movie.duracion }}</a></li>
-                        <li><a>{{ movie.calificacion }}</a></li>
-                        <li><a>{{ movie.genero }}</a></li>
+                        <li><a>{{ movie.vote_average }}</a></li>
+                        <li><a>{{ movie.release_date }}</a></li>
+                        <li><a>{{ movie.vote_count }}</a></li>
                     <ul>
                 </div>
             </div>
         </section>
-        <!--
-        <footer>
-            <p>Todos los derechos reservados CineApp 2019</p>
-        </footer> -->
     </div>
+    <script src="../js/load.js"></script>
 </body>
 </html>

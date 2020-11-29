@@ -46,9 +46,24 @@
         <article>
             <img class="image_person" src="images/index/cards.jpg">
         </article>
+        <div class="lead_generator">
+          <form class="align_form_center" @submit.prevent="sendEmail">
+              <div class="form_group">
+                <h4 class="headers">¡Inscríbase para obtener los últimos estrenos!</h4>
+              </div>
+              <div class="form_group">
+                  <input type="text" name="user_email" placeholder="Ingrese correo eletronico"><br>
+              </div>
+              <div class="form_group">
+                  <input type="submit" value="Enviar">
+              </div>
+          </form>
+        </div>
         <footer>
             <p>Todos los derechos reservados 2020</p>
         </footer>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="js/email.js"></script>
 </body>
 </html>

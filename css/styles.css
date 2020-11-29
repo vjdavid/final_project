@@ -171,6 +171,8 @@ article {
   margin: 0 auto;
   overflow: hidden;
   margin-top: 30px;
+  height: 155px;
+  width: 105px;
 }
 
 input[type=text], select {
@@ -240,4 +242,11 @@ input[type=submit]:hover {
 
 .color_text {
   color: black;
+}
+
+.lead_generator {
+  padding-left: 15%;
+  width: 70%;
+  height: 480px;
+  float: left;
 }
