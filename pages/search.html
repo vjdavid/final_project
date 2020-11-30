@@ -5,7 +5,8 @@
     <title>CineApp</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" type="text/css" href="../css/scroll.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="contenedor">
@@ -25,11 +26,11 @@
             <p class="introduction" style="margin-top: 27px;">Búsqueda</p>
         </section>
         <section style="height: 0px;">
-            <input type="text" v-model.trim="search" placeholder="Busqueda de Pelicula" @keyup="getMovies"><br><br>
+            <input type="text" v-model="movieToSearch" placeholder="Busqueda de Pelicula"><br><br>
             <h3>Resultados encontrados: </h3>
         </section>
         <section id="app">
-            <div class="card" v-for="movie in movies" :key="movie.id">
+            <div class="card" v-for="movie in filteredMovies" v-bind:key="movie.id">
                 <div class="column_left_card">
                     <img class="image_movie"
                     v-bind:src="'https://image.tmdb.org/t/p/original' + movie.poster_path "/>
