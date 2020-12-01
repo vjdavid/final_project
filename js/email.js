@@ -1,14 +1,20 @@
-import emailjs from 'emailjs-com'
-
-export default {
+new Vue({
+  el: '#app',
+  mounted() {
+    console.log('componente montado');
+  },
   methods: {
     sendEmail: (e) => {
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      emailjs.sendForm('service_xmftqle', 'template_lmwalfa', e.target, 'user_sRybl9IohtO41jrUV3ajZ')
         .then((result) => {
-          console.log('success', result.status, result.text);
+          Swal.fire(
+            'Haz sido inscrito!',
+            'En hora buena!',
+            'success'
+          )
         }, (error) => {
           console.log('failed', result.status, result.text);
         })
     }
   }
-}
+})
